@@ -1,0 +1,31 @@
+h3, h4{
+    color: #1EAEDB;
+}
+
+.form{
+    display: inline-block;
+    border: 1px solid grey;
+    vertical-align: top;
+    padding: 10px;
+}
+
+p{
+    color: slategrey;
+}
+
+#users{
+    border: 1px solid grey;
+    width: 500px;
+    height: 500px;
+    overflow:scroll;
+    padding: 10px;
+}
+
+#button{
+    margin-top: 20px;
+}
+
+.error{
+    color: red;
+    margin-top: 20px;
+}

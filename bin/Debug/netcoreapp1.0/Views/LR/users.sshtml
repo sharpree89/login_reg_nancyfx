@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+         <link rel="stylesheet" type="text/css" href="Content/style.css">
+         <link rel"stylesheet" type="text/css" href="Content/style.css">
+         <meta charset="UTF-8">
+         <title>Users</title>
+    </head>
+    <body>
+        <center>
+            <div id="users">
+                <h3>Welcome</h3>
+                <hr>
+                <p>@ViewBag.users</p>
+            </div>
+            <form action="/logout" method="post">
+                <input type="submit" value="Log Out">
+            </form>
+        </center>
+    </body>
+</html>
