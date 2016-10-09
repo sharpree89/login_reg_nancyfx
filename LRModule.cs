@@ -4,15 +4,15 @@ using Nancy;
 using DbConnection;
 using CryptoHelper;
  
-namespace Login_Reg_Nancy  
+namespace Login_Reg_Nancy   
 {
     public class LRModule : NancyModule  
     {
-        public LRModule()
+        public LRModule()   
         {
             Get("/", args =>
             {
-                return View["index.sshtml"];   
+                return View["index.sshtml"];    
             }); 
 
             Post("/register", args =>            
@@ -28,31 +28,42 @@ namespace Login_Reg_Nancy
                 string password = Request.Form["password"];
                 string hash = Crypto.HashPassword(password); 
 
+                if(first_name.Length < 2)
+                {
+                    @ViewBag.first_name = true;
+                }
+                if(last_name.Length < 2)
+                {
+                    @ViewBag.last_name = true;
+                }
+                if(email.Length < 2)
+                {
+                    @ViewBag.email = true;
+                }
+                if(password.Length < 8)
+                {
+                    @ViewBag.password = true;
+                }
                 if(first_name.Length > 2 && last_name.Length > 2 && email.Length > 6 && password.Length >= 8)
                 {
                     string query = $"INSERT INTO users (first_name, last_name, email, hash, created_at) VALUES('{first_name}', '{last_name}', '{email}', '{hash}', NOW())";
                     DbConnector.ExecuteQuery(query);
-                    @ViewBag.error = false;
                     return Response.AsRedirect("/users"); 
                 }
                 else
                 {
-                    @ViewBag.error = true;
-                    return View["index.sshtml"];
+                    return View["index.sshtml"];      
                 }
             });  
-
+ 
             Post("/login", args => 
             {
-                // //verify email exists in db
+                //verify if email matches any emails in db
+                //if an email is found, the user exists
                 // string email = Request.Form["email"];
-                // List<Dictionary<string, object>> result = DbConnector.ExecuteQuery($"SELECT * FROM users WHERE email = '{email}'");
-
-                 //verify password is correct
-                // string password = Request.Form["password"];
-                // bool IsCorrectString = Crypto.VerifyHashedPassword(hash, password);
-
-                return Response.AsRedirect("/users");    
+                // List<Dictionary<string, object>> user = DbConnector.ExecuteQuery($"SELECT * FROM users WHERE email = '{email}'");
+                
+                return Response.AsRedirect("/users");     
             });  
 
             Get("/users", args =>         

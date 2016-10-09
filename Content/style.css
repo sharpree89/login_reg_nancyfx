@@ -21,11 +21,8 @@ p{
     padding: 10px;
 }
 
-#button{
-    margin-top: 20px;
-}
-
 .error{
     color: red;
     margin-top: 20px;
+    font-size: 85%;
 }

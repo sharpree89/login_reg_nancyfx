@@ -9,14 +9,16 @@
     </head>
     <body>
         <center>
+            <h3>Welcome</h3>
             <div id="users">
-                <h3>Welcome</h3>
-                <hr>
                 <p>@ViewBag.users</p>
             </div>
-            <form action="/logout" method="post">
-                <input type="submit" value="Log Out">
-            </form>
+            <br>
+            <div id="logout">
+                <form action="/logout" method="post">
+                    <input class="button-primary" type="submit" value="Log Out">
+                </form>
+            </div>
         </center>
     </body>
 </html>

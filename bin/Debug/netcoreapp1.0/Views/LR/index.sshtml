@@ -12,9 +12,29 @@
                 <h4>Register</h4>
                 <form action="/register" method="post">
                     <p><input type="text" name="first_name" placeholder="First Name"></p>
+
+                    @If.Context.ViewBag.first_name
+                        <p class="error">Please enter your first name</p>
+                    @EndIf
+
                     <p><input type="text" name="last_name" placeholder="Last Name"></p>
+
+                    @If.Context.ViewBag.last_name
+                        <p class="error">Please enter your last name</p>
+                    @EndIf
+
                     <p><input type="email" name="email" placeholder="Email"></p>
+
+                    @If.Context.ViewBag.email
+                        <p class="error">Please enter your email address</p>
+                    @EndIf
+
                     <p><input type="password" name="password" placeholder="Password"></p>
+
+                    @If.Context.ViewBag.password
+                        <p class="error">Password must be at least 8 chars</p>
+                    @EndIf
+
                     <p><input class="button-primary" type="submit" value="Register"></p>
                 </form> 
             </div>   
@@ -26,9 +46,6 @@
                     <p><input class="button-primary" type="submit" value="Login"></p>
                 </form>
             </div>
-            @If.Context.ViewBag.error
-                <i><h5 class="error">All fields must be completely filled in</h5></i>
-            @EndIf
 
         </center>
     </body>
