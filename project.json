@@ -6,6 +6,9 @@
   },
 
   "dependencies": {
+    "Nancy.Session.InMemory": "0.9.1-pre",  
+    "Nancy.Session.Persistable": "0.9.1-pre", 
+    "FSharp.Core": "4.0.1.7-alpha",
     "CryptoHelper": "2.0.0",
     "MySqlConnector": "0.1.0-alpha12",
     "Newtonsoft.Json": "9.0.1",

@@ -9,7 +9,7 @@
     </head>
     <body>
         <center>
-            <h3>Welcome</h3>
+            <h3>Welcome, @ViewBag.current_user!</h3>
             <div id="users">
                 <p>@ViewBag.users</p>
             </div>

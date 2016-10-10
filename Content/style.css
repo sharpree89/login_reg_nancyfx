@@ -4,7 +4,7 @@ h3, h4{
 
 .form{
     display: inline-block;
-    border: 1px solid grey;
+    border: 1px solid slategrey;
     vertical-align: top;
     padding: 10px;
 }
@@ -14,7 +14,7 @@ p{
 }
 
 #users{
-    border: 1px solid grey;
+    border: 1px solid slategrey;
     width: 500px;
     height: 500px;
     overflow:scroll;

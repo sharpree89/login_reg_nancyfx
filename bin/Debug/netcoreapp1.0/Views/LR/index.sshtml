@@ -9,32 +9,42 @@
     <body>
         <center>
             <div class="form">
+                @If.Context.ViewBag.first_name
+                <p class="error">Please enter your first name</p>
+                @EndIf
+                @If.Context.ViewBag.last_name
+                <p class="error">Please enter your last name</p>
+                @EndIf
+                @If.Context.ViewBag.email
+                <p class="error">Please enter a valid email address</p>
+                @EndIf
+                @If.Context.ViewBag.password
+                <p class="error">Password must be at least 8 chars</p>
+                @EndIf
+                @If.Context.ViewBag.confirm
+                <p class="error">Please enter password confirmation</p>
+                @EndIf
+                @If.Context.ViewBag.match
+                <p class="error">Passwords must both match</p>
+                @EndIf
+                @If.Context.ViewBag.noUser
+                <p class="error">Invalid email address</p>
+                @EndIf
+                @If.Context.ViewBag.noPass
+                <p class="error">Please enter your password</p>
+                @EndIf
+                @If.Context.ViewBag.wrongPass
+                <p class="error">Invalid password</p>
+                @EndIf
+            </div>
+            <div class="form">
                 <h4>Register</h4>
                 <form action="/register" method="post">
                     <p><input type="text" name="first_name" placeholder="First Name"></p>
-
-                    @If.Context.ViewBag.first_name
-                        <p class="error">Please enter your first name</p>
-                    @EndIf
-
                     <p><input type="text" name="last_name" placeholder="Last Name"></p>
-
-                    @If.Context.ViewBag.last_name
-                        <p class="error">Please enter your last name</p>
-                    @EndIf
-
                     <p><input type="email" name="email" placeholder="Email"></p>
-
-                    @If.Context.ViewBag.email
-                        <p class="error">Please enter your email address</p>
-                    @EndIf
-
                     <p><input type="password" name="password" placeholder="Password"></p>
-
-                    @If.Context.ViewBag.password
-                        <p class="error">Password must be at least 8 chars</p>
-                    @EndIf
-
+                    <p><input type="password" name="confirm" placeholder="Confirm Password"></p>
                     <p><input class="button-primary" type="submit" value="Register"></p>
                 </form> 
             </div>   
@@ -46,7 +56,6 @@
                     <p><input class="button-primary" type="submit" value="Login"></p>
                 </form>
             </div>
-
         </center>
     </body>
 </html>

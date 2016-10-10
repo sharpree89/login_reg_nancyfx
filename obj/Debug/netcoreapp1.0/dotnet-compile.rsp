@@ -139,6 +139,7 @@
 --reference:/Users/preeyasharma/.nuget/packages/System.Xml.ReaderWriter/4.0.11/ref/netstandard1.3/System.Xml.ReaderWriter.dll
 --reference:/Users/preeyasharma/.nuget/packages/System.Xml.XDocument/4.0.11/ref/netstandard1.3/System.Xml.XDocument.dll
 --reference:/Users/preeyasharma/.nuget/packages/System.Xml.XmlSerializer/4.0.11/ref/netstandard1.3/System.Xml.XmlSerializer.dll
+/Users/preeyasharma/Desktop/C#/login_reg/Bootstrapper.cs
 /Users/preeyasharma/Desktop/C#/login_reg/DbConnection.cs
 /Users/preeyasharma/Desktop/C#/login_reg/LRModule.cs
 /Users/preeyasharma/Desktop/C#/login_reg/Program.cs

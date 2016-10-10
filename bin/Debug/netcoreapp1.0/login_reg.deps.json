@@ -8,16 +8,16 @@
     ".NETCoreApp,Version=v1.0": {
       "login_reg/1.0.0": {
         "dependencies": {
+          "Nancy.Session.InMemory": "0.9.1-pre",
+          "Nancy.Session.Persistable": "0.9.1-pre",
+          "FSharp.Core": "4.0.1.7-alpha",
           "CryptoHelper": "2.0.0",
           "MySqlConnector": "0.1.0-alpha12",
           "Newtonsoft.Json": "9.0.1",
           "Microsoft.Extensions.Logging.Console": "1.0.0",
           "Microsoft.AspNetCore.Server.Kestrel": "1.0.0",
           "Microsoft.AspNetCore.Owin": "1.0.0",
-          "Nancy": "2.0.0-barneyrubble",
-          "Nancy.Session.InMemory": "0.9.1-pre",
-          "Nancy.Session.Persistable": "0.9.1-pre",
-          "FSharp.Core": "4.0.1.7-alpha"
+          "Nancy": "2.0.0-barneyrubble"
         },
         "runtime": {
           "login_reg.dll": {}
